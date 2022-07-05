@@ -11,7 +11,7 @@
 <body>
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="#" class="navbar-brand"> Actividades</a>
+    <a href="#" class="navbar-brand p-4">  Actividades</a>
     <ul class="navbar-nav ml-auto">
       <form class="form-inline my-2 my-lg-0">
         <input type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar actividad">
@@ -31,7 +31,7 @@
               <input type="text" id="name" placeholder="actividad" class="form-control">
             </div>
             <div class="form-group">
-              <textarea id="description" cols="30" rows="10" class="form-control" placeholder="actividades"></textarea>
+              <textarea id="description" cols="30" rows="10" class="form-control" placeholder="descripcion"></textarea>
 
             </div>
 <button type="submit" class="btn btn-primary btn-block text-center">
@@ -43,6 +43,12 @@ Guardar
 
     </div>
     <div class="col-md-7">
+      <div class="card my-4" id="task-result">
+        <div class="card-body">
+          <ul id="container"></ul>
+        </div>
+
+      </div>
       <table class="table table-bordered table-sm">
         <thead>
           <tr>
