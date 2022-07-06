@@ -1,7 +1,12 @@
-
 $(document).ready(function(){ 
 
   console.log('jQuery is already');
+  console.log('Php is already');
+  console.log('The framework bootstrap is already');
+  console.log('Database is already');
+  console.log('Html, css y js');
+
+  $('#task-result').hide();
   
   $('#search').keyup(function(e) {
    if($('#search').val()){
@@ -21,9 +26,21 @@ $(document).ready(function(){
         });
         
         $('#container').html(template);
+        $('#task-result').show();
 
       }
     })
   }
-  })
+  });
+  $('#task-form').submit(function(e){
+    const postData = {
+      name: $('#name').val(),
+      description: $('#description').val()
+    };
+
+    $.post('task-add.php', postData, function (response) {
+      console.log(response);
+    });
+    e.preventDefault();
+  });
 });
